@@ -11,6 +11,7 @@
 
     <modules>
         <module>filter-demo</module>
+        <module>jpa-demo</module>
     </modules>
 
     <dependencies>
