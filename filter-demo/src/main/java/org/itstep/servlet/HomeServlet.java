@@ -2,6 +2,7 @@ package org.itstep.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,6 +20,7 @@ public class HomeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        req.setCharacterEncoding("utf-8");
 //        resp.setCharacterEncoding("utf-8");
+        resp.addCookie(new Cookie("cookie", "value"));
         if(req.getParameter("name") != null) {
             req.setAttribute("name", req.getParameter("name"));
         }
